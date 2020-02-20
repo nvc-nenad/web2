@@ -1,0 +1,49 @@
+@import './vendor/normalize';
+@import './partials/colors';
+@import './partials/mixins';
+
+body {
+  padding: 2em;
+}
+
+.container {
+  h1 {
+    color: $primary-color;
+    @include round-border();
+  }
+  p {
+    color: $secondary-color;
+    @include round-border();
+  }
+  ul {
+    li {
+      list-style: none;
+      color: $primary_color;
+    }
+  }
+}
+
+.btn {
+  @include main-button();
+  &:hover,
+  &:focus {
+    background-color: lighten($primary-button-color, 10%);
+    cursor: pointer;
+  }
+}
+// .btn:hover {
+//   background-color: rgb(0, 139, 225);
+//   cursor: pointer;
+// }
+
+
+
+
+// Medium screens and up
+@media (min-width: 768px) {
+  
+}
+
+@media (min-width: 1024px) {
+  
+}
